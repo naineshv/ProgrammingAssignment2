@@ -6,6 +6,16 @@
 
 ## matrixEqual: Compare matrices and return TRUE if equal, else return FALSE
 
+##Example:
+##m1 <- matrix(c(1:4),2)
+##mc <- makeCacheMatrix(m1)
+##cacheSolve(mc)
+##cacheSolve(mc)
+##m2 <- matrix(c(5:8),2)
+##mc[["set","matrix"]](m2)
+##cacheSolve(mc)
+##cacheSolve(mc)
+
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
         set <- function(y) {
