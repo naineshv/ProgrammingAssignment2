@@ -10,11 +10,14 @@
 ##m1 <- matrix(c(1:4),2)
 ##mc <- makeCacheMatrix(m1)
 ##cacheSolve(mc)
-##cacheSolve(mc)
+##cacheSolve(mc)        #from cache
 ##m2 <- matrix(c(5:8),2)
 ##mc[["set","matrix"]](m2)
 ##cacheSolve(mc)
-##cacheSolve(mc)
+##cacheSolve(mc)        #from cache
+##--if the matrix hasnt changed, do not recalculate inverse
+##mc[["set","matrix"]](m2)
+##cacheSolve(mc)        #from cache
 
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
