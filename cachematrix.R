@@ -21,7 +21,7 @@
 
 ## makeCacheMatrix: This function creates a special "matrix" object which is a matrix of function objects.
 ## These functions get and set the matrix as well as its inverse.  The returned matrix object will look as below.
-## The dimensions of the matrix have been named according to its purpose
+## The dimensions of the matrix have been named according to its purpose?load
 ## makeCachematrix(m1)
 ##    | matrix  inverse
 ## ---|-------------------
@@ -67,7 +67,5 @@ cacheSolve <- function(x, ...) {
 
 ## matrixEqual: Compare matrices and return TRUE if equal, else return FALSE
 matrixEqual <- function(x, y) {
-        (is.matrix(x) && is.matrix(y) 
-        #&& dim(x) == dim(y) #if only the dims change, it does not affect the inverse, hence removing check
-        && all(x == y))
+        is.matrix(x) && is.matrix(y) && dim(x) == dim(y) && all(x == y)
 }
